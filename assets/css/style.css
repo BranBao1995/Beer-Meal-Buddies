@@ -6,3 +6,8 @@
 .custom-font2 {
     font-family: 'Smokum', cursive;
 }
+
+.custom-homebtn {
+    padding: 3px;
+    margin: 2%;
+}
