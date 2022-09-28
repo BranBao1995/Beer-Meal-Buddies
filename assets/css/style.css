@@ -5,9 +5,49 @@
 
 .custom-font2 {
     font-family: 'Smokum', cursive;
+    font-size: 40px;
+    text-shadow: 3px 3px 3px black;
 }
 
 .custom-homebtn {
     padding: 3px;
     margin: 2%;
+    background: white;
+    border-radius: 5px;
+}
+
+.custom-homebtn:hover{
+    background-color: teal;
+      transition: 0.7s;
+      cursor: pointer;
+}
+
+#custom-border1 {
+    border-style: solid;
+    padding: 90px;
+    margin: 5%;
+    background: none;
+    margin-top: 8.5%;
+}
+#custom-border1 {
+    background-color: teal;
+}
+
+#custom-beername {
+    text-align: center;
+}
+
+
+#custom-bg{
+    background-color:green;
+}
+
+#custom-descripbox2 {
+    position: relative;
+    top: 20%;
+}
+
+#custom-splitbox {
+    position: relative;
+    bottom: 25%;
 }
