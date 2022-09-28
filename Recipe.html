@@ -13,6 +13,33 @@
     <title>Beer Meal Buddies</title>
   </head>
   <body>
+    <nav class="custom-navbar">
+      <a href="./Home.html">Back to Home Page</a>
+      <a href="./Beer.html">Previous</a>
+    </nav>
+
+    <section class="custom-recipe">
+      <div class="custom-recipe-name-photo">
+        <h1 class="custom-recipe-name"></h1>
+        <img class="custom-recipe-photo" src="" alt="recipe photo" />
+      </div>
+      <div class="custom-recipe-details">
+        <h1 class="custom-recipe-cuisine"></h1>
+        <h2 class="custom-recipe-calories"></h2>
+        <div class="custom-recipe-time-yield">
+          <p class="custom-recipe-time"></p>
+          <p class="custom-recipe-yield"></p>
+        </div>
+        <ul class="custom-recipe-ingrList"></ul>
+      </div>
+    </section>
+
+    <div class="custom-modal" style="display: none">
+      <h1 class="custom-errorMsg">Sorry, No matching results :(</h1>
+      <button class="custom-return">Return</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
     <script src="./assets/js/Recipe.js"></script>
   </body>
