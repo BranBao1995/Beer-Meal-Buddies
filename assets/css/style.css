@@ -1,3 +1,7 @@
+#custom-bodybg {
+    background: url(../images/beerbg.jpg);
+}
+
 .custom-font1 {
     font-family: 'Nabla', cursive;
     font-size: 70px;
@@ -5,7 +9,7 @@
 
 .custom-font2 {
     font-family: 'Smokum', cursive;
-    font-size: 40px;
+    font-size: 50px;
     text-shadow: 3px 3px 3px black;
 }
 
@@ -24,13 +28,14 @@
 
 #custom-border1 {
     border-style: solid;
-    padding: 90px;
-    margin: 5%;
+    padding: 100px;
+    margin: 2%;
     background: none;
-    margin-top: 8.5%;
 }
 #custom-border1 {
-    background-color: teal;
+    background: url(../images/foodbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #custom-beername {
@@ -50,4 +55,8 @@
 #custom-splitbox {
     position: relative;
     bottom: 25%;
+}
+
+#beerSelection {
+    padding: 0 0 0 10px;
 }
