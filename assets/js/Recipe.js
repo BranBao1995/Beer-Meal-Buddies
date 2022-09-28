@@ -15,11 +15,15 @@ const modal = document.querySelector(".custom-modal");
 const errorMsg = document.querySelector(".custom-errorMsg");
 const returnButton = document.querySelector(".custom-return");
 
+let searchParam = document.location.search;
+
 function fetchData() {
   removeElements();
 
   fetch(
-    "https://api.edamam.com/api/recipes/v2?q=beef&type=any&ingr=5-10&app_id=3fe55cbd&app_key=43119aedb2ca6b9807fa142f62b069e4"
+    "https://api.edamam.com/api/recipes/v2" +
+      searchParam +
+      "&type=any&ingr=5-10&app_id=3fe55cbd&app_key=43119aedb2ca6b9807fa142f62b069e4"
   )
     .then(function (response) {
       if (response.ok) {
