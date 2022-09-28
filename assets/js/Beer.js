@@ -21,14 +21,14 @@ function displayBeer(data) {
   const mealPairing2 = data[0].food_pairing[1];
   const mealPairing3 = data[0].food_pairing[2];
 
-  console.log(name);
-  console.log(tagline);
-  console.log(image);
-  console.log(description);
-  console.log(firstBrewed);
-  console.log(mealPairing1);
-  console.log(mealPairing2);
-  console.log(mealPairing3);
+  document.querySelector("#custom-beername").innerText = name
+  document.querySelector("#tagline").innerText = tagline
+  document.querySelector("#image").src = image
+  document.querySelector("#description").innerText = description
+  document.querySelector("#firstBrewed").innerText = "First brewed in: " + firstBrewed
+  document.querySelector("#mP1").innerText = mealPairing1
+  document.querySelector("#mP2").innerText = mealPairing2
+  document.querySelector("#mP3").innerText = mealPairing3
 }
 
 recipeEl.addEventListener("submit", function (event) {
