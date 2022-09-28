@@ -11,6 +11,10 @@ const timeRequired = document.querySelector(".custom-recipe-time");
 const recipeYield = document.querySelector(".custom-recipe-yield");
 const ingrList = document.querySelector(".custom-recipe-ingrList");
 
+const modal = document.querySelector(".custom-modal");
+const errorMsg = document.querySelector(".custom-errorMsg");
+const returnButton = document.querySelector(".custom-return");
+
 function fetchData() {
   removeElements();
 
@@ -23,17 +27,20 @@ function fetchData() {
           if (data.hits.length !== 0) {
             displayRecipe(data);
           } else {
-            alert("No matched results!");
+            errorMsg.textContent = "Sorry, no matching results";
+            modal.style.display = "block";
           }
 
           console.log(data);
         });
       } else {
-        alert("Error: " + response.statusText);
+        errorMsg.textContent = "Error: " + response.statusText;
+        modal.style.display = "block";
       }
     })
     .catch(function (error) {
-      alert("Unable to fetch");
+      errorMsg.textContent = "Error: " + response.statusText;
+      modal.style.display = "block";
     });
 }
 
@@ -78,5 +85,10 @@ function removeElements() {
     ingrElements[i].remove();
   }
 }
+
+returnButton.addEventListener("click", function () {
+  modal.style.display = "none";
+  location.assign("./Beer.html");
+});
 
 fetchData();
