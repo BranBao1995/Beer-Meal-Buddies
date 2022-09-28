@@ -3,11 +3,20 @@
 
 // https://api.edamam.com/api/recipes/v2    BASE URL
 
-function fetchData() {
-  let apiUrl =
-    "https://api.edamam.com/api/recipes/v2?q=beef&type=any&ingr=5-10&app_id=3fe55cbd&app_key=43119aedb2ca6b9807fa142f62b069e4";
+const recipeName = document.querySelector(".custom-recipe-name");
+const recipePhoto = document.querySelector(".custom-recipe-photo");
+const cuisineType = document.querySelector(".custom-recipe-cuisine");
+const calories = document.querySelector(".custom-recipe-calories");
+const timeRequired = document.querySelector(".custom-recipe-time");
+const recipeYield = document.querySelector(".custom-recipe-yield");
+const ingrList = document.querySelector(".custom-recipe-ingrList");
 
-  fetch(apiUrl)
+function fetchData() {
+  removeElements();
+
+  fetch(
+    "https://api.edamam.com/api/recipes/v2?q=beef&type=any&ingr=5-10&app_id=3fe55cbd&app_key=43119aedb2ca6b9807fa142f62b069e4"
+  )
     .then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
@@ -29,24 +38,45 @@ function fetchData() {
 }
 
 function displayRecipe(recipes) {
-  const recipeName = document.querySelector(".custom-recipe-name");
-  const recipePhoto = document.querySelector(".custom-recipe-photo");
-  const cuisineType = document.querySelector(".custom-recipe-cuisine");
-  const calories = document.querySelector(".custom-recipe-calories");
-  const timeRequired = document.querySelector(".custom-recipe-time");
-  const recipeYield = document.querySelector(".custom-recipe-yield");
-  const ingrList = document.querySelector(".custom-recipe-ingrList");
-
   let randomIndex = Math.floor(Math.random() * (recipes.hits.length - 1));
 
   recipeName.textContent = recipes.hits[randomIndex].recipe.label;
   recipePhoto.setAttribute("src", recipes.hits[randomIndex].recipe.image);
 
-  cuisineType.textContent = recipes.hits[randomIndex].recipe.cuisineType[0]; // needs to capitalize the first letter of each word.
+  let str = recipes.hits[randomIndex].recipe.cuisineType[0];
+  let fisrtLetterUpper = str.slice(0, 1).toUpperCase();
+
+  cuisineType.textContent =
+    fisrtLetterUpper + str.slice(1, str.length).toLowerCase(); // needs to capitalize the first letter of each word.
   calories.textContent =
-    recipes.hits[randomIndex].recipe.calories.toFixed(0) + "kJ";
+    recipes.hits[randomIndex].recipe.calories.toFixed(0) + " kJ";
+
+  timeRequired.textContent =
+    recipes.hits[randomIndex].recipe.totalTime + " minutes";
+  recipeYield.textContent = "Serves " + recipes.hits[randomIndex].recipe.yield;
+
+  for (
+    let i = 0;
+    i < recipes.hits[randomIndex].recipe.ingredientLines.length;
+    i++
+  ) {
+    const ingredient = document.createElement("li");
+    ingredient.setAttribute("class", "custom-recipe-ingr");
+    ingredient.textContent =
+      recipes.hits[randomIndex].recipe.ingredientLines[i];
+
+    ingrList.appendChild(ingredient);
+  }
 
   console.log(recipes.hits[randomIndex]);
+}
+
+function removeElements() {
+  const ingrElements = document.querySelectorAll(".custom-recipe-ingr");
+
+  for (let i = 0; i < ingrElements.length; i++) {
+    ingrElements[i].remove();
+  }
 }
 
 fetchData();
