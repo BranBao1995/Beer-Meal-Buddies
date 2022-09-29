@@ -105,4 +105,9 @@
     top: 130%;
     right: 50%;
     border: solid;
+
+
+#mP1:hover, #mP2:hover,  #mP3:hover{
+    cursor: pointer;
 }
+
