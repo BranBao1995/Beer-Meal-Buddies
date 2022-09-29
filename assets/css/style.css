@@ -1,3 +1,13 @@
+#custom-bodybg {
+    background: url(../images/beerbg.jpg);
+}
+
+#custom-beerbodybg {
+    background: url(../images/beerbg2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .custom-font1 {
     font-family: 'Nabla', cursive;
     font-size: 70px;
@@ -5,32 +15,34 @@
 
 .custom-font2 {
     font-family: 'Smokum', cursive;
-    font-size: 40px;
+    font-size: 50px;
     text-shadow: 3px 3px 3px black;
 }
 
 .custom-homebtn {
-    padding: 3px;
-    margin: 2%;
+    padding: 15px;
+    margin: .5%;
     background: white;
     border-radius: 5px;
+    font-family: sans-serif;
 }
 
 .custom-homebtn:hover{
-    background-color: teal;
+    background-color: rgb(97, 115, 115);
       transition: 0.7s;
       cursor: pointer;
 }
 
 #custom-border1 {
     border-style: solid;
-    padding: 90px;
-    margin: 5%;
+    padding: 100px;
+    margin: 2%;
     background: none;
-    margin-top: 8.5%;
 }
 #custom-border1 {
-    background-color: teal;
+    background: url(../images/foodgif.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #custom-beername {
@@ -39,15 +51,55 @@
 
 
 #custom-bg{
-    background-color:green;
+    background: url(../images/beerbg2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#custom-descripbox1 {
+    display: flex;
+    background: url(../images/descbg1.jpg);
+    background-size: cover;
+    border: solid black;
 }
 
 #custom-descripbox2 {
-    position: relative;
-    top: 20%;
+    display: flex;
+    justify-content: space-between;
+    background: url(../images/descbg1.jpg);
+    background-size: cover;
+   border: solid black;
 }
 
 #custom-splitbox {
-    position: relative;
-    bottom: 25%;
+    margin: 10px auto 0 auto;
+    display: flex;
+    border: solid black;
+    width: 70%;
+    height: 50%;
+   
+    background: url(../images/descbg1.jpg);
+    background-size: cover;
+    
 }
+
+#beerSelection {
+    padding: 0 0 0 10px;
+}
+
+.column {
+    height: 400px;
+}
+
+.column img {
+    max-height: 100%;
+    position: relative;
+    left: 40%;
+}
+
+#test1 {
+    background: url(../images/beer-10.gif);
+    border-bottom: solid;
+    background-size: cover;
+}
+
