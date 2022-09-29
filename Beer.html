@@ -29,29 +29,15 @@
     <div id="custom-beername" class="ui huge header">
     </div>
      <h4>Description</h4>
-      <p class="custom-p" id="tagline"></p>
-      <p class="custom-p" id="description"></p>
-      <p class="custom-p" id="firstBrewed"></p>
+      <p  id="tagline"></p>
+      <p  id="description"></p>
+      <p  id="firstBrewed"></p>
       </div>
       <div class="column">
       <img id="image"></img>
       </div>
       </div>
 
-<!-- <div class="ui four column grid">
-  <div class="two column row">
-    <div class="row2">
-         <h2>Recipe Search</h2>
-      <div id="custom-form" class="ui icon input">
-        <form id = "recipeSearch">
-        <input id = "recipeInput" type="text" placeholder="Search...">
-        <button class="mini ui button">
-        </form>
-          <i class="inverted circular search link icon"></i>
-        </button>
-    </div>
-  </div>
-  </div> -->
 <div class="container">
   <h6>Meal Pairings:</h6>
     <p class="custom-p" id ="mP1" class="item"></p>
@@ -60,14 +46,37 @@
         </p>
         <p class="custom-p" id = "mP3" class="item">
         </p>
-</div>
+      </div>
 
-
- 
-        
-  
-
-
+      <div class="container2">
+         <h2>Recipe Search</h2>
+      <div class="ui icon input">
+        <form id = "recipeSearch">
+        <input id = "recipeInput" type="text" placeholder="Search...">
+        <button class="mini ui button">
+        </form>
+          <i class="inverted circular search link icon"></i>
+        </button>
+      </div>
+      </div>
+      
+ <div class="ui modal tiny">
+      <i class="close icon"></i>
+      <div class="header">
+        No recipe entered!
+      </div>
+      <div class="image content">
+        <div class="image">
+          <img src = "assets/images/beerbudgif.gif" alt = "Cheers!">
+        </div>
+        <div class="description">
+          Please enter a recipe to find a meal buddy for your chosen beer!
+        </div>
+      </div>
+      <div class="actions">
+        <div id = "modalBtn" class="ui button">OK</div>
+      </div>
+    </div>
     
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
