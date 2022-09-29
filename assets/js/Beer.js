@@ -1,6 +1,7 @@
 //selection = get local storage data attribute
 recipeEl = document.querySelector("#recipeSearch");
 selection = localStorage.getItem("beer");
+homeButtonEl = document.querySelector(".custom-homebtn")
 
 fetch("https://api.punkapi.com/v2/beers/" + selection)
   .then((response) => {
@@ -40,3 +41,8 @@ recipeEl.addEventListener("submit", function (event) {
   let queryString = "./Recipe.html?q=" + q;
   location.assign(queryString);
 });
+
+homeButtonEl.addEventListener("click", function() {
+  homePage = "./Home.html"
+  location.assign(homePage)
+})
