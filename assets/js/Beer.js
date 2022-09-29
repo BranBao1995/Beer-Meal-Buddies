@@ -7,6 +7,7 @@ let mP1El = document.querySelector("#mP1")
 let mP2El = document.querySelector("#mP2")
 let mP3El = document.querySelector("#mP3")
 
+//Beer data is fetched from Punkapi based of selecetion from home page
 fetch("https://api.punkapi.com/v2/beers/" + selection)
   .then((response) => {
     return response.json();
@@ -16,6 +17,7 @@ fetch("https://api.punkapi.com/v2/beers/" + selection)
     displayBeer(data);
   });
 
+//beer data is displayed on the page
 function displayBeer(data) {
   const name = data[0].name;
   const tagline = data[0].tagline;
@@ -38,6 +40,7 @@ function displayBeer(data) {
   document.querySelector("#abv").innerText = "Alcohol Percentage: " + abv
 }
 
+//created event listener for search bar with pushed the seach input to our recipe api
 recipeEl.addEventListener("submit", function (event) {
   event.preventDefault();
   let recipe = document.querySelector("#recipeInput").value;
@@ -51,30 +54,39 @@ recipeEl.addEventListener("submit", function (event) {
   location.assign(queryString);}
 });
 
+//created an event listener to go back to home page
 homeButtonEl.addEventListener("click", function() {
-  homePage = "./Home.html"
-  location.assign(homePage)
+  homePage = "./Home.html";
+  location.assign(homePage);
 })
 
+//added event listener to hide the modal 
 modalEl.addEventListener("click", function (){
   $('.tiny.modal')
-  .modal('hide')
+  .modal('hide');
 })
 
+//added event listener to each meal pairing option
 mP1El.addEventListener("click", function(){
   let recipe = document.querySelector("#mP1").textContent
-  let queryString = "./Recipe.html?q=" + recipe
-  location.assign(queryString)
+  let recipeArr = recipe.split(" ");
+  let q = recipeArr.join("-");
+  let queryString = "./Recipe.html?q=" + q
+  location.assign(queryString);
 })
 
 mP2El.addEventListener("click", function(){
   let recipe = document.querySelector("#mP2").textContent
-  let queryString = "./Recipe.html?q=" + recipe
-  location.assign(queryString)
+  let recipeArr = recipe.split(" ");
+  let q = recipeArr.join("-");
+  let queryString = "./Recipe.html?q=" + q;
+  location.assign(queryString);
 })
 
 mP3El.addEventListener("click", function(){
   let recipe = document.querySelector("#mP3").textContent
-  let queryString = "./Recipe.html?q=" + recipe
-  location.assign(queryString)
+  let recipeArr = recipe.split(" ");
+  let q = recipeArr.join("-");
+  let queryString = "./Recipe.html?q=" + q;
+  location.assign(queryString);
 })

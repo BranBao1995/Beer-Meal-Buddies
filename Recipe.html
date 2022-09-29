@@ -12,21 +12,33 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Beer Meal Buddies</title>
   </head>
+
+
   <body>
+  <header id="custom.heroimg">
+  <img id="custom-foodheadimg" src="assets/images/foodheader.jpeg">
+  </header>
+    <h6>Food Recipe</h6>
 
-    <nav class="custom-navbar">
-      <a href="./Home.html">Back to Home Page</a>
-      <a href="./Beer.html">Back to Beer Page</a>
-    </nav>
+  <div id="custom-navbar" class="ui segment"><button class="ui right floated button">
+    <a href="./Beer.html">Back to Beer Page</a></button>
+    <button class="ui left floated button"><a href="./Home.html">Back to Home Page</a></button>
+   </div>
 
-
-    <section class="custom-recipe">
+   <div class="ui right aligned grid">
+   <div class="left floated right aligned six wide column">
+    <div class="ui segment">
       <div class="custom-recipe-name-photo">
-        <h1 class="custom-recipe-name"></h1>
       </div>
-      <div class="custom-recipe-details">
-        <h1 class="custom-recipe-cuisine"></h1>
-        <h2 class="custom-recipe-calories"></h2>
+    </div>
+  </div>
+  <div class="right floated left aligned six wide column">
+    <div class="ui segment">
+      <h1  id="custom-foodh1" class="custom-recipe-name"></h1>
+      <h2 class="custom-recipe-cuisine"></h2>
+      <section class="custom-recipe">
+      <div class="custom-recipe-details"></div>
+        <h3 class="custom-recipe-calories"></h3>
         <div class="custom-recipe-time-yield">
           <p class="custom-recipe-time"></p>
           <p class="custom-recipe-yield"></p>
@@ -34,6 +46,10 @@
         <ul class="custom-recipe-ingrList"></ul>
       </div>
     </section>
+    </div>
+  </div>
+  </div>
+</div>
 
     <footer class="custom-footer">
       <div class="custom-contacts">
