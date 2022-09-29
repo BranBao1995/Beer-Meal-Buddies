@@ -168,3 +168,9 @@ bottom: 5%;
     width: 100%;
     height: 500px;
 }
+
+/* footer */
+.custom-footer {
+    border: solid black;
+    text-align: center;
+}
