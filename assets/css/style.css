@@ -73,7 +73,7 @@
 
 #custom-splitbox {
     margin: 10px auto 0 auto;
-    display: flex;
+    /* display: flex; */
     border: solid black;
     width: 70%;
     height: 50%;
@@ -91,6 +91,14 @@
     height: 400px;
 }
 
+.column.description {
+    overflow-y: scroll;
+}
+
+.column.description::-webkit-scrollbar {
+    display: none
+}
+
 .column img {
     max-height: 100%;
     position: relative;
@@ -103,3 +111,8 @@
     background-size: cover;
 }
 
+#custom-form {
+    left: 14%;
+    top: 2%;
+
+}
