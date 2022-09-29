@@ -16,12 +16,11 @@ const modal = document.querySelector(".custom-modal");
 const errorMsg = document.querySelector(".custom-errorMsg");
 const returnButton = document.querySelector(".custom-return");
 
-let searchParam = document.location.search;
-
-console.log(searchParam);
-
+// function to fetch data
 function fetchData() {
   removeElements();
+
+  let searchParam = document.location.search;
 
   fetch(
     "https://api.edamam.com/api/recipes/v2" +
@@ -52,8 +51,6 @@ function fetchData() {
 }
 
 function displayRecipe(recipes) {
-  // let randomIndex = Math.floor(Math.random() * (recipes.hits.length - 1));
-
   recipeName.textContent = recipes.hits[0].recipe.label;
   const recipePhoto = document.createElement("img");
   recipePhoto.setAttribute("alt", "recipe photo");
