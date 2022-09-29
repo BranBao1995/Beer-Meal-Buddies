@@ -1,3 +1,4 @@
+/* homepage css*/
 #custom-bodybg {
     background: url(../images/beerbg.jpg);
 }
@@ -47,41 +48,17 @@
 
 #custom-beername {
     text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 50px;
 }
 
-
+/* beer background css */
 #custom-bg{
     background: url(../images/beerbg2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-#custom-descripbox1 {
-    display: flex;
-    background: url(../images/descbg1.jpg);
-    background-size: cover;
-    border: solid black;
-}
-
-#custom-descripbox2 {
-    display: flex;
-    justify-content: space-between;
-    background: url(../images/descbg1.jpg);
-    background-size: cover;
-   border: solid black;
-}
-
-#custom-splitbox {
-    margin: 10px auto 0 auto;
-    display: flex;
-    border: solid black;
-    width: 70%;
-    height: 50%;
-   
-    background: url(../images/descbg1.jpg);
-    background-size: cover;
-    
-}
 
 #beerSelection {
     padding: 0 0 0 10px;
@@ -90,6 +67,7 @@
 .column {
     height: 400px;
 }
+
 
 .column img {
     max-height: 100%;
@@ -103,6 +81,65 @@
     background-size: cover;
 }
 
+#custom-form {
+    left: 14%;
+    top: 2%
+}
+#test6 {
+    border: solid;
+    background: white;
+    overflow: scroll;
+    background: url(../images/descbg1.jpg);
+
+}
+
+#custom-colgrid {
+    margin-top: 2%;
+    position: relative;
+    left: 25%;
+    
+}
+
+.test55{
+    position: relative;
+    top: 130%;
+    right: 50%;
+    border: solid;
+
+}
+
 #mP1:hover, #mP2:hover,  #mP3:hover{
     cursor: pointer;
+}
+
+h4{
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+.container {
+    position: relative;
+    left: 29%;
+    margin-top: 3%;
+    border: solid;
+    width: 35%;
+    background: white;
+}
+
+.custom-p{
+    color: red;
+    text-shadow: 1px 1px 1px black;
+    font-size: 22px;
+    text-align: center;
+}
+
+h6 {
+    padding: 10px;
+    text-align: center;
+}
+
+.container2 {
+    position: relative;
+    left: 42.5%;
+    margin-top: 2%;
 }
