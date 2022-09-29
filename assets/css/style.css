@@ -103,3 +103,6 @@
     background-size: cover;
 }
 
+#mP1:hover, #mP2:hover,  #mP3:hover{
+    cursor: pointer;
+}

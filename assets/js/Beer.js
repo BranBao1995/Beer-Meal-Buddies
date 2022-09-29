@@ -1,8 +1,11 @@
-//selection = get local storage data attribute
-recipeEl = document.querySelector("#recipeSearch");
-selection = localStorage.getItem("beer");
-homeButtonEl = document.querySelector(".custom-homebtn")
-modalEl = document.querySelector("#modalBtn")
+
+let recipeEl = document.querySelector("#recipeSearch");
+let selection = localStorage.getItem("beer");
+let homeButtonEl = document.querySelector(".custom-homebtn")
+let modalEl = document.querySelector("#modalBtn")
+let mP1El = document.querySelector("#mP1")
+let mP2El = document.querySelector("#mP2")
+let mP3El = document.querySelector("#mP3")
 
 fetch("https://api.punkapi.com/v2/beers/" + selection)
   .then((response) => {
@@ -22,6 +25,7 @@ function displayBeer(data) {
   const mealPairing1 = data[0].food_pairing[0];
   const mealPairing2 = data[0].food_pairing[1];
   const mealPairing3 = data[0].food_pairing[2];
+  const abv = data[0].abv;
 
   document.querySelector("#custom-beername").innerText = name
   document.querySelector("#tagline").innerText = tagline
@@ -31,6 +35,7 @@ function displayBeer(data) {
   document.querySelector("#mP1").innerText = mealPairing1
   document.querySelector("#mP2").innerText = mealPairing2
   document.querySelector("#mP3").innerText = mealPairing3
+  document.querySelector("#abv").innerText = "Alcohol Percentage: " + abv
 }
 
 recipeEl.addEventListener("submit", function (event) {
@@ -54,4 +59,22 @@ homeButtonEl.addEventListener("click", function() {
 modalEl.addEventListener("click", function (){
   $('.tiny.modal')
   .modal('hide')
+})
+
+mP1El.addEventListener("click", function(){
+  let recipe = document.querySelector("#mP1").textContent
+  let queryString = "./Recipe.html?q=" + recipe
+  location.assign(queryString)
+})
+
+mP2El.addEventListener("click", function(){
+  let recipe = document.querySelector("#mP2").textContent
+  let queryString = "./Recipe.html?q=" + recipe
+  location.assign(queryString)
+})
+
+mP3El.addEventListener("click", function(){
+  let recipe = document.querySelector("#mP3").textContent
+  let queryString = "./Recipe.html?q=" + recipe
+  location.assign(queryString)
 })
