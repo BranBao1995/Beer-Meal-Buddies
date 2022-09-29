@@ -106,8 +106,33 @@
     right: 50%;
     border: solid;
 
+}
 
 #mP1:hover, #mP2:hover,  #mP3:hover{
     cursor: pointer;
 }
 
+h4{
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+.container {
+    position: relative;
+    left: 29%;
+    margin-top: 3%;
+    border: solid;
+    width: 15%;
+    background: white;
+}
+
+.custom-p{
+    color: red;
+    text-shadow: 1px 1px 1px black;
+    font-size: 22px;
+}
+
+h6 {
+    padding: 10px;
+    text-align: center;
+}
