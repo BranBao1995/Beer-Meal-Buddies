@@ -105,6 +105,13 @@
     cursor: pointer;
 }
 
+ #custom-header6{
+    text-align: center;
+    font-size: 25px;
+    margin: 1px;
+    padding: 2px;
+}
+
 h4{
     text-decoration: underline;
     font-size: 20px;
@@ -126,16 +133,6 @@ h4{
     text-align: center;
 }
 
-h6 {
-    position: relative;
-    padding: 10px;
-    text-align: center;
-    bottom: 45%;
-    font-size: 40px;
-    margin-right: auto;
-    margin-left: auto;
-
-}
 
 .container2 {
     position: relative;
@@ -144,8 +141,8 @@ h6 {
 }
 
 .custom-text {
-    font-size: 15px;
-    color: goldenrod;
+    font-size: 20px;
+    color: rgb(255, 64, 0);
     text-shadow: 1px 1px 1px black;
 }
 
@@ -158,19 +155,47 @@ h6 {
 }
 
 #custom-navbar{
-margin: 0;
+
 text-align: center;
-height: 12%;
-bottom: 5%;
+height: 9%;
 }
 
 #custom-foodheadimg {
     width: 100%;
-    height: 500px;
+    height: 700px;
 }
 
 /* footer */
 .custom-footer {
-    border: solid black;
+    position: relative;
+    top: 27%;
+    border-top: solid black;
     text-align: center;
+    margin: 1px;
+    padding: 1px;
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+    background: white;
+    opacity: 0.8;
+}
+
+#custom-headcont {
+    position: relative;
+    top: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Courgette', cursive;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+
+.custom-recipebox {
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+#custom-contactinfo{
+    font-size: 20px;
 }
