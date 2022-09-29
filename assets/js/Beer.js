@@ -2,6 +2,7 @@
 recipeEl = document.querySelector("#recipeSearch");
 selection = localStorage.getItem("beer");
 homeButtonEl = document.querySelector(".custom-homebtn")
+modalEl = document.querySelector("#modalBtn")
 
 fetch("https://api.punkapi.com/v2/beers/" + selection)
   .then((response) => {
@@ -35,14 +36,22 @@ function displayBeer(data) {
 recipeEl.addEventListener("submit", function (event) {
   event.preventDefault();
   let recipe = document.querySelector("#recipeInput").value;
-  console.log(recipe);
+  if (recipe === ""){
+    $('.tiny.modal')
+  .modal('show')
+  } else {
   let recipeArr = recipe.split(" ");
   let q = recipeArr.join("-");
   let queryString = "./Recipe.html?q=" + q;
-  location.assign(queryString);
+  location.assign(queryString);}
 });
 
 homeButtonEl.addEventListener("click", function() {
   homePage = "./Home.html"
   location.assign(homePage)
+})
+
+modalEl.addEventListener("click", function (){
+  $('.tiny.modal')
+  .modal('hide')
 })
