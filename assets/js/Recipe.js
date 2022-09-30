@@ -26,7 +26,9 @@ function fetchData() {
 
   let searchParam = document.location.search;
 
-  fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=key_lime_pie")
+  console.log(searchParam);
+
+  fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=" + searchParam)
     .then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
