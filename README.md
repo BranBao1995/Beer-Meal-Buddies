@@ -47,6 +47,10 @@ Beer Meal Buddies is still a work in progress. There are plans for the future, B
 
 No installations are needed to use Beer Meal Buddies.
 
+## Usage
+
+- [Link to Github Deployment](https://branbao1995.github.io/Beer-Meal-Buddies/index.html)
+
 ## Project Wireframe
 
 - Landing Page
@@ -71,8 +75,6 @@ Zytka Mateusz
 Diana Vu
 
 - [Github Link](https://github.com/DianasJourney)
-
-Link to deployment:
 
 ## License
 
