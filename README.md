@@ -1,44 +1,43 @@
 ## <p align="center"> **🍻Beer Meal Buddies🍳** </p>
 
-## Overview 
+## Overview
 
-Beer Meal Buddies is designed for users who love a good beer! Beer Meal Buddies comes with a recommended list of great beers, upon each selection of beer, it will come with their own perfect meal pairing. 
+Beer Meal Buddies is designed for users who love a good beer! Beer Meal Buddies comes with a recommended list of great beers, upon each selection of beer, it will come with their own perfect meal pairing.
 
-## Technologies 
+## Technologies
 
- * Vscode
- * CSS
- * Semantic UI
- * HTML
- * JavaScript
- * APIS
- * JQUERY
-
+- Vscode
+- CSS
+- Semantic UI
+- HTML
+- JavaScript
+- APIS
+- JQUERY
 
 ## Userstory:
 
 1. As a user who loves beer but unsure of what meals to have with it
-2. I WANT to see a selection of beers with their description, alongside that I WANT to see possible meal pairings. 
+2. I WANT to see a selection of beers with their description, alongside that I WANT to see possible meal pairings.
 3. So THAT I can have an easier time deciding on what to drink and eat.
 
-## Acceptance Criteria: 
+## Acceptance Criteria:
+
 - Given I am using a beer and meal buddy application
 - When I open the application
 - Then I am presented with the home page and dropdown list
 - When I click on the dropdown list I am presented with a selection of beer
 - When I hit the search button
 - Then I am redirected to a page where I can see the beer description, photo and possible meal pairings.
-- When I decide if I do not like these pairings 
+- When I decide if I do not like these pairings
 - Then I am presented with a search button for other recipes
 - When I search for a recipe
 - Then i am presented with a picture and recipe instructions
 
-
 ## How Do I Use Beer Meal Buddies?
+
 Beer Meal Buddies is super friendly for all users! Users can navigate through the webpage in just one click! Just scroll down to the drop list and select a beer. Once the beer has been selected then users will be directed to the Beer Page! The Beer Page will include the description and photo of the beer! Hungry? Good news! Not only does Beer Meal Buddies give you info on your selected beer but it also gives a great recommended pairing of food! Not liking what you see? We thought ahead and implemented a recipe search button, users can search anything they’d like and it will redirect them to a new page called “Recipe Page”. The Recipe Page was designed to be simple and eye-catching so users can scroll down and see a list of ingredients, calories, serving sizes and picture of the results!
 
 ![Beer-Meal-Buddies-_Home](https://user-images.githubusercontent.com/109758045/193313776-0fa8531e-e115-4b83-9c37-77f98c7cf953.png)
-
 
 ## Roadmap
 
@@ -48,23 +47,32 @@ Beer Meal Buddies is still a work in progress. There are plans for the future, B
 
 No installations are needed to use Beer Meal Buddies.
 
+## Project Wireframe
+
+- Landing Page
+  ![Wireframe_home](./assets/images/Wireframe_1.JPG)
+
+- Beer Page
+  ![Wireframe_beer](./assets/images/Wireframe_2.JPG)
+
+- Recipe Page
+  ![Wireframe_recipe](./assets/images/Wireframe_3.JPG)
 
 ## Acknowledgements ![GitHub contributors](https://img.shields.io/github/contributors/branbao1995/beer-meal-buddies?label=contributers)
 
-
 HongDong Bao
 
--[Github Link](https://github.com/BranBao1995)
+- [Github Link](https://github.com/BranBao1995)
 
 Zytka Mateusz
 
--[Github Link](https://github.com/MateuszZytka)
+- [Github Link](https://github.com/MateuszZytka)
 
 Diana Vu
 
--[Github Link](https://github.com/DianasJourney)
+- [Github Link](https://github.com/DianasJourney)
 
-Link to deployment: 
+Link to deployment:
 
 ## License
 
