@@ -217,3 +217,15 @@ height: 9%;
 #custom-idrightgrid{
     margin-top: 55px;
 }
+
+.custom-beerfooter {
+    position: var(--position);
+    border-top: solid black;
+    text-align: center;
+    margin: 1px;
+    padding: 1px;
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+    background: var(--background);
+    opacity: 0.8;
+}
