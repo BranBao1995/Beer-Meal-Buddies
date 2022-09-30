@@ -49,7 +49,7 @@ recipeEl.addEventListener("submit", function (event) {
   .modal('show')
   } else {
   let recipeArr = recipe.split(" ");
-  let q = recipeArr.join("-");
+  let q = recipeArr.join("_");
   let queryString = "./Recipe.html?q=" + q;
   location.assign(queryString);}
 });
@@ -70,7 +70,7 @@ modalEl.addEventListener("click", function (){
 mP1El.addEventListener("click", function(){
   let recipe = document.querySelector("#mP1").textContent
   let recipeArr = recipe.split(" ");
-  let q = recipeArr.join("-");
+  let q = recipeArr.join("_");
   let queryString = "./Recipe.html?q=" + q
   location.assign(queryString);
 })
@@ -78,7 +78,7 @@ mP1El.addEventListener("click", function(){
 mP2El.addEventListener("click", function(){
   let recipe = document.querySelector("#mP2").textContent
   let recipeArr = recipe.split(" ");
-  let q = recipeArr.join("-");
+  let q = recipeArr.join("_");
   let queryString = "./Recipe.html?q=" + q;
   location.assign(queryString);
 })
@@ -86,7 +86,7 @@ mP2El.addEventListener("click", function(){
 mP3El.addEventListener("click", function(){
   let recipe = document.querySelector("#mP3").textContent
   let recipeArr = recipe.split(" ");
-  let q = recipeArr.join("-");
+  let q = recipeArr.join("_");
   let queryString = "./Recipe.html?q=" + q;
   location.assign(queryString);
 })
