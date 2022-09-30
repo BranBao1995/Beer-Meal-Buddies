@@ -62,15 +62,15 @@ No installations are needed to use Beer Meal Buddies.
 
 HongDong Bao
 
--[Github Link](https://github.com/BranBao1995)
+- [Github Link](https://github.com/BranBao1995)
 
 Zytka Mateusz
 
--[Github Link](https://github.com/MateuszZytka)
+- [Github Link](https://github.com/MateuszZytka)
 
 Diana Vu
 
--[Github Link](https://github.com/DianasJourney)
+- [Github Link](https://github.com/DianasJourney)
 
 Link to deployment:
 
