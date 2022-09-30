@@ -3,6 +3,8 @@
 
 // https://api.edamam.com/api/recipes/v2    BASE URL
 
+// https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata
+
 const recipeName = document.querySelector(".custom-recipe-name");
 
 const cuisineType = document.querySelector(".custom-recipe-cuisine");
@@ -20,19 +22,15 @@ modalDescrption = document.querySelector(".description");
 
 // function to fetch data
 function fetchData() {
-  removeElements();
+  // removeElements();
 
   let searchParam = document.location.search;
 
-  fetch(
-    "https://api.edamam.com/api/recipes/v2" +
-      searchParam +
-      "&type=any&ingr=5-10&app_id=3fe55cbd&app_key=43119aedb2ca6b9807fa142f62b069e4"
-  )
+  fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=key_lime_pie")
     .then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
-          if (data.hits.length !== 0) {
+          if (data.meals.length !== 0) {
             displayRecipe(data);
           } else {
             $(".tiny.modal").modal("show");
@@ -50,58 +48,58 @@ function fetchData() {
 }
 
 function displayRecipe(recipes) {
-  recipeName.textContent = recipes.hits[0].recipe.label;
+  recipeName.textContent = recipes.meals[0].strMeal;
   const recipePhoto = document.createElement("img");
   recipePhoto.setAttribute("alt", "recipe photo");
   recipePhoto.setAttribute("class", "custom-recipe-photo");
-  recipePhoto.setAttribute("src", recipes.hits[0].recipe.image);
+  recipePhoto.setAttribute("src", recipes.meals[0].strMealThumb);
   namePhotoContainer.appendChild(recipePhoto);
 
-  let str = recipes.hits[0].recipe.cuisineType[0];
-  let fisrtLetterUpper = str.slice(0, 1).toUpperCase(); // capitalize the first letter of each word.
+  // let str = recipes.hits[0].recipe.cuisineType[0];
+  // let fisrtLetterUpper = str.slice(0, 1).toUpperCase(); // capitalize the first letter of each word.
 
-  cuisineType.textContent =
-    "Cuisine type: " +
-    fisrtLetterUpper +
-    str.slice(1, str.length).toLowerCase(); // needs to capitalize the first letter of each word.
-  calories.textContent =
-    "Calories: " + recipes.hits[0].recipe.calories.toFixed(0) + " kJ";
+  // cuisineType.textContent =
+  //   "Cuisine type: " +
+  //   fisrtLetterUpper +
+  //   str.slice(1, str.length).toLowerCase(); // needs to capitalize the first letter of each word.
+  // calories.textContent =
+  //   "Calories: " + recipes.hits[0].recipe.calories.toFixed(0) + " kJ";
 
-  if (
-    recipes.hits[0].recipe.totalTime >= 0 &&
-    recipes.hits[0].recipe.totalTime < 45
-  ) {
-    timeRequired.textContent = "Preparation time: ~ 30 minutes";
-  } else if (
-    recipes.hits[0].recipe.totalTime >= 45 &&
-    recipes.hits[0].recipe.totalTime < 60
-  ) {
-    timeRequired.textContent = "Preparation time: ~ 45 minutes";
-  } else if (
-    recipes.hits[0].recipe.totalTime >= 60 &&
-    recipes.hits[0].recipe.totalTime < 90
-  ) {
-    timeRequired.textContent = "Preparation time: ~ 60 minutes";
-  } else if (
-    recipes.hits[0].recipe.totalTime >= 90 &&
-    recipes.hits[0].recipe.totalTime < 120
-  ) {
-    timeRequired.textContent = "Preparation time: ~ 90 minutes";
-  } else if (recipes.hits[0].recipe.totalTime >= 120) {
-    timeRequired.textContent = "Preparation time: > 120 minutes";
-  }
+  // if (
+  //   recipes.hits[0].recipe.totalTime >= 0 &&
+  //   recipes.hits[0].recipe.totalTime < 45
+  // ) {
+  //   timeRequired.textContent = "Preparation time: ~ 30 minutes";
+  // } else if (
+  //   recipes.hits[0].recipe.totalTime >= 45 &&
+  //   recipes.hits[0].recipe.totalTime < 60
+  // ) {
+  //   timeRequired.textContent = "Preparation time: ~ 45 minutes";
+  // } else if (
+  //   recipes.hits[0].recipe.totalTime >= 60 &&
+  //   recipes.hits[0].recipe.totalTime < 90
+  // ) {
+  //   timeRequired.textContent = "Preparation time: ~ 60 minutes";
+  // } else if (
+  //   recipes.hits[0].recipe.totalTime >= 90 &&
+  //   recipes.hits[0].recipe.totalTime < 120
+  // ) {
+  //   timeRequired.textContent = "Preparation time: ~ 90 minutes";
+  // } else if (recipes.hits[0].recipe.totalTime >= 120) {
+  //   timeRequired.textContent = "Preparation time: > 120 minutes";
+  // }
 
-  recipeYield.textContent = "Serves " + recipes.hits[0].recipe.yield;
+  // recipeYield.textContent = "Serves " + recipes.hits[0].recipe.yield;
 
-  for (let i = 0; i < recipes.hits[0].recipe.ingredientLines.length; i++) {
-    const ingredient = document.createElement("li");
-    ingredient.setAttribute("class", "custom-recipe-ingr");
-    ingredient.textContent = recipes.hits[0].recipe.ingredientLines[i];
+  // for (let i = 0; i < recipes.hits[0].recipe.ingredientLines.length; i++) {
+  //   const ingredient = document.createElement("li");
+  //   ingredient.setAttribute("class", "custom-recipe-ingr");
+  //   ingredient.textContent = recipes.hits[0].recipe.ingredientLines[i];
 
-    ingrList.appendChild(ingredient);
-  }
+  //   ingrList.appendChild(ingredient);
+  // }
 
-  console.log(recipes.hits[0]);
+  // console.log(recipes.hits[0]);
 }
 
 function removeElements() {
