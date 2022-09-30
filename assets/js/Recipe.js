@@ -28,11 +28,15 @@ function fetchData() {
 
   console.log(searchParam);
 
-  fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=" + searchParam)
+  fetch(
+    "https://api.edamam.com/api/recipes/v2?type=any" +
+      searchParam +
+      "&app_id=3fe55cbd&app_key=43119aedb2ca6b9807fa142f62b069e4"
+  )
     .then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
-          if (data.meals.length !== 0) {
+          if (data.meals != null) {
             displayRecipe(data);
           } else {
             $(".tiny.modal").modal("show");
