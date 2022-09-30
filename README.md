@@ -54,7 +54,7 @@ No installations are needed to use Beer Meal Buddies.
 
 HongDong Bao
 
-- [Github Link](https://github.com/BranBao1995)
+-[Github Link](https://github.com/BranBao1995)
 
 Zytka Mateusz
 
