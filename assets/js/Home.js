@@ -8,7 +8,7 @@ document.querySelector("#beer").addEventListener("click", function () {
   console.log(selectedBeerId);
   localStorage.setItem("beer", selectedBeerId);
 
-  let queryString = "./assets/Beer.html";
+  let queryString = "./Beer.html";
 
   location.assign(queryString);
 });
