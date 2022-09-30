@@ -3,6 +3,8 @@
 
 // https://api.edamam.com/api/recipes/v2    BASE URL
 
+// https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata
+
 const recipeName = document.querySelector(".custom-recipe-name");
 
 const cuisineType = document.querySelector(".custom-recipe-cuisine");
@@ -24,10 +26,12 @@ function fetchData() {
 
   let searchParam = document.location.search;
 
+  console.log(searchParam);
+
   fetch(
     "https://api.edamam.com/api/recipes/v2" +
       searchParam +
-      "&type=any&ingr=5-10&app_id=3fe55cbd&app_key=43119aedb2ca6b9807fa142f62b069e4"
+      "&type=any&app_id=3fe55cbd&app_key=43119aedb2ca6b9807fa142f62b069e4"
   )
     .then(function (response) {
       if (response.ok) {
