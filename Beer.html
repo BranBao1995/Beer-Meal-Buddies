@@ -15,15 +15,16 @@
   </head>
 
   <body id="custom-beerbodybg">
-    <div id="custom-head1">
+    <!-- Header with home button-->
+    <header id="custom-head1">
       <button class="custom-homebtn" class="ui left floated button">Back to HomePage</button>
       <h1 class="ui sizer vertical segment">
        
     </h1>
-    </div>
-   
-   <div id="custom-colgrid" class="ui four column relaxed grid">
-   <div id="custom-boxone" class="column">
+    </header>
+   <!-- main with the description of the beer and the picture-->
+   <main id="custom-colgrid" class="ui four column relaxed grid">
+   <section id="custom-boxone" class="column">
     <div id="custom-beername" class="ui huge header">
     </div>
      <h4>Description</h4>
@@ -31,13 +32,13 @@
       <p  class="custom-text" id="description"></p>
       <p  class="custom-text" id="firstBrewed"></p>
       <p class="custom-text" id ="abv"></p>
-      </div>
+      </section>
       <div class="column">
       <img id="image"></img>
       </div>
-      </div>
-
-<div class="container">
+   </main>
+<!-- Meal pairing section-->
+<section class="container">
   <h6 id="custom-header6">Meal Pairings:</h6>
     <p class="custom-p" id ="mP1" class="item"></p>
         </p>
@@ -45,9 +46,9 @@
         </p>
         <p class="custom-p" id = "mP3" class="item">
         </p>
-      </div>
-
-      <div class="container2">
+      </section>
+<!--Search section for recipe-->
+      <section class="container2">
          <h2>Recipe Search</h2>
       <div class="ui icon input">
         <form id = "recipeSearch">
@@ -57,8 +58,9 @@
           <i class="inverted circular search link icon"></i>
         </button>
       </div>
-      </div>
-      
+    </section>
+      <!-- Modal for when users input nothing or something not stored in our recipe API, a  modal will pop up telling users nothing is found
+      or to search for something!-->
  <div class="ui modal tiny">
       <i class="close icon"></i>
       <div class="header">
@@ -76,7 +78,7 @@
         <div id = "modalBtn" class="ui button">OK</div>
       </div>
     </div>
-    
+    <!--Footer with contact info-->
      <footer class="custom-footer">
       <p id="custom-contactinfo">Contact Info:</p>
         <p class="custom-phone">Phone Number: (905) -111-1111</p>
